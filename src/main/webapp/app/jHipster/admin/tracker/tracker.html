@@ -1,0 +1,30 @@
+<div id="content">
+    <div class="row">
+        <big-breadcrumbs items="['Administrator', 'Real-time user activities']" icon="user" class="col-xs-12 col-sm-7 col-md-7 col-lg-4"></big-breadcrumbs>
+    </div>
+    <!-- content -->
+    <div>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th translate="tracker.table.userlogin">User</th>
+                        <th translate="tracker.table.ipaddress">IP Address</th>
+                        <th translate="tracker.table.page">Current page</th>
+                        <th translate="tracker.table.time">Time</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="activity in vm.activities">
+                        <td>{{activity.userLogin}}</td>
+                        <td>{{activity.ipAddress}}</td>
+                        <td>{{activity.page}}</td>
+                        <td>{{activity.time}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
